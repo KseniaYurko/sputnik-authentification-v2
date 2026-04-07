@@ -1,0 +1,7 @@
+# ninja log v6
+15	758	7972863659910848	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule.cpp.obj	9c948e2509a5c3c4
+5	777	7972863659820830	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	a3b5dcaf44cf743d
+23	911	7972863660000910	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	4a1dad4859f7ea5a
+47	926	7972863660318868	CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj	44b1256a64198fe9
+69	1103	7972863660508885	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	193ff5ab8ce5e761
+1106	1296	7972863670815548	SputnikAuthV2.exe	c8375cac04d396a3

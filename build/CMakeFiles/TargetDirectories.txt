@@ -1,0 +1,3 @@
+C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/build/CMakeFiles/SputnikAuthV2.dir
+C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/build/CMakeFiles/edit_cache.dir
+C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/build/CMakeFiles/rebuild_cache.dir
