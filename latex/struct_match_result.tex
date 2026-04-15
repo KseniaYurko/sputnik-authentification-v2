@@ -1,0 +1,91 @@
+\doxysection{Match\+Result Struct Reference}
+\hypertarget{struct_match_result}{}\label{struct_match_result}\index{MatchResult@{MatchResult}}
+
+
+Результат сравнения спутника с наблюдениями  
+
+
+
+
+{\ttfamily \#include $<$Core\+Types.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_match_result_af0354b4909e0fc832b169da2727cfddb}{operator$<$}} (const \mbox{\hyperlink{struct_match_result}{Match\+Result}} \&other) const
+\begin{DoxyCompactList}\small\item\em Сортировка результатов (по возрастанию χ²) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_match_result_ab97198eb9860dda5317c5b952e57d96d}{satellite\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Название спутника \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_match_result_a246be00e205f317ff89b0ffb16f663ab}{norad\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em NORAD ID. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_match_result_aca95ecdd1ae8741c44273a297f94df53}{chi\+\_\+squared}}
+\begin{DoxyCompactList}\small\item\em Значение χ² \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_match_result_aebae98fba6b503c635b2d90e6ecfc7ba}{probability}}
+\begin{DoxyCompactList}\small\item\em Вероятность совпадения (\%) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Результат сравнения спутника с наблюдениями 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_match_result_af0354b4909e0fc832b169da2727cfddb}\label{struct_match_result_af0354b4909e0fc832b169da2727cfddb} 
+\index{MatchResult@{MatchResult}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!MatchResult@{MatchResult}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Match\+Result\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_match_result}{Match\+Result}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Сортировка результатов (по возрастанию χ²) 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_match_result_aca95ecdd1ae8741c44273a297f94df53}\label{struct_match_result_aca95ecdd1ae8741c44273a297f94df53} 
+\index{MatchResult@{MatchResult}!chi\_squared@{chi\_squared}}
+\index{chi\_squared@{chi\_squared}!MatchResult@{MatchResult}}
+\doxysubsubsection{\texorpdfstring{chi\_squared}{chi\_squared}}
+{\footnotesize\ttfamily double Match\+Result\+::chi\+\_\+squared}
+
+
+
+Значение χ² 
+
+\Hypertarget{struct_match_result_a246be00e205f317ff89b0ffb16f663ab}\label{struct_match_result_a246be00e205f317ff89b0ffb16f663ab} 
+\index{MatchResult@{MatchResult}!norad\_id@{norad\_id}}
+\index{norad\_id@{norad\_id}!MatchResult@{MatchResult}}
+\doxysubsubsection{\texorpdfstring{norad\_id}{norad\_id}}
+{\footnotesize\ttfamily int Match\+Result\+::norad\+\_\+id}
+
+
+
+NORAD ID. 
+
+\Hypertarget{struct_match_result_aebae98fba6b503c635b2d90e6ecfc7ba}\label{struct_match_result_aebae98fba6b503c635b2d90e6ecfc7ba} 
+\index{MatchResult@{MatchResult}!probability@{probability}}
+\index{probability@{probability}!MatchResult@{MatchResult}}
+\doxysubsubsection{\texorpdfstring{probability}{probability}}
+{\footnotesize\ttfamily double Match\+Result\+::probability}
+
+
+
+Вероятность совпадения (\%) 
+
+\Hypertarget{struct_match_result_ab97198eb9860dda5317c5b952e57d96d}\label{struct_match_result_ab97198eb9860dda5317c5b952e57d96d} 
+\index{MatchResult@{MatchResult}!satellite\_name@{satellite\_name}}
+\index{satellite\_name@{satellite\_name}!MatchResult@{MatchResult}}
+\doxysubsubsection{\texorpdfstring{satellite\_name}{satellite\_name}}
+{\footnotesize\ttfamily std\+::string Match\+Result\+::satellite\+\_\+name}
+
+
+
+Название спутника 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Modules/core/\mbox{\hyperlink{_core_types_8h}{Core\+Types.\+h}}\end{DoxyCompactItemize}
