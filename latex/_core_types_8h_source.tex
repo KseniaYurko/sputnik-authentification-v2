@@ -1,0 +1,26 @@
+\doxysection{Core\+Types.\+h}
+\hypertarget{_core_types_8h_source}{}\label{_core_types_8h_source}\index{src/Modules/core/CoreTypes.h@{src/Modules/core/CoreTypes.h}}
+\mbox{\hyperlink{_core_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_match_result}{MatchResult}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_match_result_ab97198eb9860dda5317c5b952e57d96d}{satellite\_name}};\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_match_result_a246be00e205f317ff89b0ffb16f663ab}{norad\_id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_match_result_aca95ecdd1ae8741c44273a297f94df53}{chi\_squared}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_match_result_aebae98fba6b503c635b2d90e6ecfc7ba}{probability}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_match_result_af0354b4909e0fc832b169da2727cfddb}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_match_result}{MatchResult}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_match_result_aca95ecdd1ae8741c44273a297f94df53}{chi\_squared}}\ <\ other.\mbox{\hyperlink{struct_match_result_aca95ecdd1ae8741c44273a297f94df53}{chi\_squared}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_measurement_sigma}{MeasurementSigma}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_measurement_sigma_a589b562371e42ff270c80dce3e666f55}{sigmaAz\_deg}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_measurement_sigma_a5fd0875df5377307a5e23adbae9b74c5}{sigmaEl\_deg}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_measurement_sigma_ae9c1645c4b23197684930949c035a19f}{sigmaAzRate\_degps}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_measurement_sigma_a3afb7a9adff94e4b59ff199e848f246f}{sigmaElRate\_degps}};}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

@@ -21,4 +21,11 @@ public:
      * @brief Загрузка наблюдений (пока заглушка)
      */
     std::vector<Observation> loadObservations(const std::string& path);
+
+    /**
+     * @brief Загрузка каталога с Celestrak
+     */
+    std::vector<SatelliteCatalogEntry> loadCatalogFromCelestrak(
+        const std::string& groupName);
 };
+

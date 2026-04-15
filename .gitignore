@@ -1,0 +1,74 @@
+# ========================
+# Build directories
+# ========================
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# ========================
+# CMake
+# ========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# ========================
+# Executables / binaries
+# ========================
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# ========================
+# Object files
+# ========================
+*.o
+*.obj
+*.a
+*.lib
+
+# ========================
+# vcpkg (игнорируем собранные пакеты)
+# ========================
+vcpkg/installed/
+vcpkg/packages/
+vcpkg/buildtrees/
+
+# (но сам vcpkg оставляем!)
+!vcpkg/
+!vcpkg/scripts/
+!vcpkg/triplets/
+
+# ========================
+# Doxygen
+# ========================
+html/
+latex/
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.log
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Cache files (TLE)
+# ========================
+*.tle

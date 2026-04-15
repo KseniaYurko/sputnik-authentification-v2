@@ -1,0 +1,29 @@
+\doxysection{Data\+Types.\+h}
+\hypertarget{_data_types_8h_source}{}\label{_data_types_8h_source}\index{src/Modules/data/DataTypes.h@{src/Modules/data/DataTypes.h}}
+\mbox{\hyperlink{_data_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_observation}{Observation}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observation_a60e15b509ce4c32ba1e3407ef74e3b86}{azimuth}};\ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observation_a547adee6347788be0ad5eac905245c43}{elevation}};\ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observation_a24e70307cb696bae68e13501dc638b88}{time\_jd}};\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observation_ad645d3bfcd62efa7440f82033ff26ff3}{time\_jdFr}};\ \ \ }
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_observer}{Observer}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observer_a60c9c02ee06fce733e384d1f066fb1b6}{lat\_deg}};\ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observer_a207b2f93f1cd8132e452dd870d3497a1}{lon\_deg}};\ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_observer_af19b1deb25250c7a748f430f9f64b29d}{alt\_km}};\ \ \ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_satellite_catalog_entry}{SatelliteCatalogEntry}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_satellite_catalog_entry_a2f1060fcf604eae440701945589f5d3e}{name}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_satellite_catalog_entry_a2d6685f4784b2201f2eb2ae99ec2bbf7}{norad\_id}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_satellite_catalog_entry_ac85556b54234f70c3e8e4cf78565a62e}{tle\_line1}};\ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_satellite_catalog_entry_ae404da864d9ef788554befceaef37c0f}{tle\_line2}};\ \ \ }
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}
