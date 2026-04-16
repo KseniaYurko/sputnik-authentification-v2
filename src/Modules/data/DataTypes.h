@@ -33,3 +33,23 @@ struct SatelliteCatalogEntry {
     std::string tle_line1;   ///< Первая строка TLE
     std::string tle_line2;   ///< Вторая строка TLE
 };
+
+
+/**
+ * @brief Группа каталога Celestrak
+ */
+struct CelestrakGroup {
+    std::string display_name;
+    std::string group_slug;
+    std::string category_name;
+    std::string category_slug;
+};
+
+/**
+ * @brief Категория каталогов Celestrak
+ */
+struct CelestrakCategory {
+    std::string title;
+    std::string slug;
+    std::vector<CelestrakGroup> groups;
+};
