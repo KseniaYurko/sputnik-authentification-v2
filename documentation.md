@@ -79,7 +79,7 @@ Data → Prepare → Core → Output
 
 # Документация (Doxygen)
 
-## 🔹 Генерация HTML
+## Генерация HTML
 
 ```bash
 doxygen Doxyfile
@@ -93,7 +93,7 @@ html/index.html
 
 ---
 
-# 📌 Текущее состояние
+# Текущее состояние
 
 * ✔ реализована архитектура
 * ✔ подключён интернет (libcurl)

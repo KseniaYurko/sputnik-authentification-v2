@@ -67,6 +67,15 @@ build CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher.cpp.obj: CX
   TARGET_COMPILE_PDB = CMakeFiles\SputnikAuthV2.dir\
   TARGET_PDB = SputnikAuthV2.pdb
 
+build CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry.cpp.obj: CXX_COMPILER__SputnikAuthV2_unscanned_Release C$:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/src/Modules/data/CelestrakRegistry.cpp || cmake_object_order_depends_target_SputnikAuthV2
+  DEP_FILE = CMakeFiles\SputnikAuthV2.dir\src\Modules\data\CelestrakRegistry.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -isystem C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\SputnikAuthV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\SputnikAuthV2.dir\src\Modules\data
+  TARGET_COMPILE_PDB = CMakeFiles\SputnikAuthV2.dir\
+  TARGET_PDB = SputnikAuthV2.pdb
+
 build CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule.cpp.obj: CXX_COMPILER__SputnikAuthV2_unscanned_Release C$:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/src/Modules/data/DataModule.cpp || cmake_object_order_depends_target_SputnikAuthV2
   DEP_FILE = CMakeFiles\SputnikAuthV2.dir\src\Modules\data\DataModule.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17
@@ -120,7 +129,7 @@ build CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj: CXX_COMPILER__SputnikAuthV2
 #############################################
 # Link the executable SputnikAuthV2.exe
 
-build SputnikAuthV2.exe: CXX_EXECUTABLE_LINKER__SputnikAuthV2_Release CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj | C$:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a
+build SputnikAuthV2.exe: CXX_EXECUTABLE_LINKER__SputnikAuthV2_Release CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj | C$:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SputnikAuthV2.dir
