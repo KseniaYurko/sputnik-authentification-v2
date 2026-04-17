@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../data/DataTypes.h"
+#include "PrepareTypes.h"
 #include <vector>
 
 /**
@@ -9,8 +9,12 @@
 class PrepareModule {
 public:
     /**
-     * @brief Обработка наблюдений
+     * @brief Обработка
      */
-    std::vector<Observation> process(
-        const std::vector<Observation>& input);
+    PreparedData process(
+        const std::vector<Observation>& observations,
+        const std::vector<SatelliteCatalogEntry>& catalog,
+        const Observer& observer,
+        const MeasurementSigma& sigma
+    );
 };

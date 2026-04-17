@@ -11,6 +11,8 @@ add_executable(SputnikAuthV2 ${SOURCES})
 
 find_package(CURL REQUIRED)
 
+target_include_directories(SputnikAuthV2 PRIVATE src)
+
 target_link_libraries(SputnikAuthV2 PRIVATE CURL::libcurl)
 
 file(GLOB DLLS

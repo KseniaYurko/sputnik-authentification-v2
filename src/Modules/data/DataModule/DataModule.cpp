@@ -1,6 +1,6 @@
 #include "DataModule.h"
-#include "CelestrakFetcher.h"
-#include "TLEParser.h"
+#include "Modules/data/CelestrakFetcher/CelestrakFetcher.h"
+#include "Modules/data/TLEParser/TLEParser.h"
 
 #include <fstream>
 #include <sstream>

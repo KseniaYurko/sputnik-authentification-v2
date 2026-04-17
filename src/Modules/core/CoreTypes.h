@@ -21,9 +21,9 @@ struct MatchResult {
 /**
  * @brief Оценки ошибок измерений
  */
-struct MeasurementSigma {
-    double sigmaAz_deg;
-    double sigmaEl_deg;
-    double sigmaAzRate_degps;
-    double sigmaElRate_degps;
-};
+// struct MeasurementSigma {
+//     double sigmaAz_deg;
+//     double sigmaEl_deg;
+//     double sigmaAzRate_degps;
+//     double sigmaElRate_degps;
+// };
