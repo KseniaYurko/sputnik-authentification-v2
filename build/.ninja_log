@@ -1,10 +1,11 @@
 # ninja log v6
-4	1328	7980642549770763	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	b8cf9dc8d4ae50eb
-76	1460	7980642550546890	CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj	43fec7002f1f92bc
-94	1610	7980642550722968	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	4bd937f793ec7163
-50	1636	7980642550371324	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	33f89875f5947d03
-35	1655	7980642550145155	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser.cpp.obj	f7ab75b8112e36b9
-13	3637	7980642549855978	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher.cpp.obj	d9d7ed67a69cf2ce
-28	3801	7980642550003706	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule.cpp.obj	f04a04e3e579a0d5
-20	4014	7980642549912412	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry.cpp.obj	ba3f12f83c5e3fd6
-4017	7032	7980642589875026	SputnikAuthV2.exe	eb21e611911df69f
+68	1576	7981204902073080	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	f46587fac938496e
+74	1939	7981204902203053	CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj	83927ad7f7aee978
+39	2210	7981204901993091	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser/TLEParser.cpp.obj	8134685177c60623
+11	3879	7981204901517743	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher/CelestrakFetcher.cpp.obj	8102531154742955
+19	4034	7981204901577743	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry/CelestrakRegistry.cpp.obj	941fd3b299731915
+25	4213	7981204901657726	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule/DataModule.cpp.obj	293693b489b983fa
+26	393	7981205428208462	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	9596a4e9a1fc2995
+34	539	7981205428278473	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	f46587fac938496e
+40	705	7981205428348477	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	6b9da5e99518a83e
+707	6391	7981205435003176	SputnikAuthV2.exe	ad95051b98a545b1

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DataTypes.h"
+#include "Modules/data/DataTypes.h"
 #include <string>
 #include <vector>
 
@@ -21,21 +21,6 @@ public:
      * @brief Загрузка наблюдений (пока заглушка)
      */
     std::vector<Observation> loadObservations(const std::string& path);
-
-
-    // /**
-    //  * @brief Загрузка каталога с сохранением
-    //  *
-    //  * Сначала проверяет наличие локального файла (.tle).
-    //  * Если файл существует — загружает данные из него.
-    //  * Если файла нет — скачивает каталог с Celestrak,
-    //  * сохраняет в файл и затем парсит.
-    //  *
-    //  * @param groupName Имя группы (например: "stations", "starlink")
-    //  * @return Вектор элементов каталога спутников
-    //  */
-    // std::vector<SatelliteCatalogEntry>
-    // loadCatalogWithCache(const std::string& groupName);
 
     /**
      * @brief Скачать выбранные группы каталогов

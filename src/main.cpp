@@ -1,5 +1,5 @@
-#include "Modules/data/DataModule.h"
-#include "Modules/data/CelestrakRegistry.h"
+#include "Modules/data/DataModule/DataModule.h"
+#include "Modules/data/CelestrakRegistry/CelestrakRegistry.h"
 
 #include "Modules/prepare/PrepareModule.h"
 
@@ -14,6 +14,9 @@ int main() {
     std::cout << "Program started" << std::endl;
 
     DataModule data;
+    PrepareModule prep;
+    CoreModule core;
+    OutputModule output;
 
     /// --- 1. UPDATE ---
     std::cout << "Update catalogs? (1 = yes, 0 = no): ";
@@ -48,20 +51,44 @@ int main() {
     std::cout << "Total satellites for analysis: "
               << catalog.size() << std::endl;
 
-    PrepareModule prep;
-    CoreModule core;
-    OutputModule output;
+    /// --- 3. ВХОДНЫЕ ДАННЫЕ (пока заглушка) ---
+    std::vector<Observation> observations;
 
-    std::vector<Observation> obs;
-    Observer observer{0.0, 0.0, 0.0};
+    // TODO: потом сюда чтение файла наблюдений
+    observations.push_back({0.0, 30.0, 2451545.0, 0.1});
+    observations.push_back({10.0, 35.0, 2451545.0, 0.2});
 
-    std::cout << "Before prepare" << std::endl;
-    auto prepared = prep.process(obs);
+    Observer observer{55.0, 37.0, 0.2};
 
-    std::cout << "Before core" << std::endl;
-    auto results = core.identifySatellites(prepared, catalog, observer);
+    MeasurementSigma sigma{
+        0.1, 0.1,
+        0.01, 0.01
+    };
 
-    std::cout << "Before output" << std::endl;
+    /// --- 4. PREPARE ---
+    PreparedData prepared;
+
+    try {
+        prepared = prep.process(
+            observations,
+            catalog,
+            observer,
+            sigma
+        );
+    }
+    catch (const std::exception& e) {
+        std::cout << "[Prepare ERROR] " << e.what() << std::endl;
+        return 1;
+    }
+
+    /// --- 5. CORE ---
+    auto results = core.identifySatellites(
+        prepared.observations,
+        prepared.catalog,
+        prepared.observer
+    );
+
+    /// --- 6. OUTPUT ---
     output.print(results);
 
     std::cout << "Finished" << std::endl;

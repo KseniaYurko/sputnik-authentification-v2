@@ -53,3 +53,13 @@ struct CelestrakCategory {
     std::string slug;
     std::vector<CelestrakGroup> groups;
 };
+
+/**
+ * @brief Ошибки измерений
+ */
+struct MeasurementSigma {
+    double sigmaAz_deg;
+    double sigmaEl_deg;
+    double sigmaAzRate_degps;
+    double sigmaElRate_degps;
+};

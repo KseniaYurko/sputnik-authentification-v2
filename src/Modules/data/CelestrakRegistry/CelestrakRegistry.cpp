@@ -2,7 +2,7 @@
  * @file CelestrakRegistry.cpp
  * @brief Реестр каталогов Celestrak и обработка пользовательского выбора
  */
-#include "./CelestrakRegistry.h"
+#include "Modules/data/CelestrakRegistry/CelestrakRegistry.h"
 #include <algorithm>
 #include <cctype>
 #include <iostream>
