@@ -1,6 +1,7 @@
 #include "Modules/data/CelestrakFetcher/CelestrakFetcher.h"
 #include <curl/curl.h>
 #include <stdexcept>
+#include <iostream>
 
 static size_t writeToString(void* contents, size_t size, size_t nmemb, void* userp) {
     size_t total = size * nmemb;
@@ -29,6 +30,7 @@ std::string downloadCelestrakTLE(const std::string& group) {
     curl_easy_cleanup(curl);
 
     if (res != CURLE_OK) {
+        std::cout << "CURL code: " << res << std::endl;
         throw std::runtime_error("download failed");
     }
 

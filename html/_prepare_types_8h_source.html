@@ -83,7 +83,26 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">PrepareTypes.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_prepare_types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma onceЫ</span></div>
+<a href="_prepare_types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_data_types_8h.html">Modules/data/DataTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_prepared_data.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_prepared_data.html">PreparedData</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_prepared_data.html#aa2337c801c9745d27929468f692d50bb">    9</a></span>    std::vector&lt;Observation&gt; <a class="code hl_variable" href="struct_prepared_data.html#aa2337c801c9745d27929468f692d50bb">observations</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_prepared_data.html#a40d7610571bf4ec3da7dcf10dbf3236d">   10</a></span>    std::vector&lt;SatelliteCatalogEntry&gt; <a class="code hl_variable" href="struct_prepared_data.html#a40d7610571bf4ec3da7dcf10dbf3236d">catalog</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_prepared_data.html#aad64432d47c820fe1e6ab37381faf7a8">   11</a></span>    <a class="code hl_struct" href="struct_observer.html">Observer</a> <a class="code hl_variable" href="struct_prepared_data.html#aad64432d47c820fe1e6ab37381faf7a8">observer</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_prepared_data.html#a273c09a1698dd387d464fe2f5569443f">   12</a></span>    <a class="code hl_struct" href="struct_measurement_sigma.html">MeasurementSigma</a> <a class="code hl_variable" href="struct_prepared_data.html#a273c09a1698dd387d464fe2f5569443f">sigma</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
+</div>
+<div class="ttc" id="a_data_types_8h_html"><div class="ttname"><a href="_data_types_8h.html">DataTypes.h</a></div></div>
+<div class="ttc" id="astruct_measurement_sigma_html"><div class="ttname"><a href="struct_measurement_sigma.html">MeasurementSigma</a></div><div class="ttdoc">Ошибки измерений</div><div class="ttdef"><b>Definition</b> DataTypes.h:60</div></div>
+<div class="ttc" id="astruct_observer_html"><div class="ttname"><a href="struct_observer.html">Observer</a></div><div class="ttdoc">Координаты точки наблюдения ГСК</div><div class="ttdef"><b>Definition</b> DataTypes.h:21</div></div>
+<div class="ttc" id="astruct_prepared_data_html"><div class="ttname"><a href="struct_prepared_data.html">PreparedData</a></div><div class="ttdoc">Данные подготовленные для Core.</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:8</div></div>
+<div class="ttc" id="astruct_prepared_data_html_a273c09a1698dd387d464fe2f5569443f"><div class="ttname"><a href="struct_prepared_data.html#a273c09a1698dd387d464fe2f5569443f">PreparedData::sigma</a></div><div class="ttdeci">MeasurementSigma sigma</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:12</div></div>
+<div class="ttc" id="astruct_prepared_data_html_a40d7610571bf4ec3da7dcf10dbf3236d"><div class="ttname"><a href="struct_prepared_data.html#a40d7610571bf4ec3da7dcf10dbf3236d">PreparedData::catalog</a></div><div class="ttdeci">std::vector&lt; SatelliteCatalogEntry &gt; catalog</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:10</div></div>
+<div class="ttc" id="astruct_prepared_data_html_aa2337c801c9745d27929468f692d50bb"><div class="ttname"><a href="struct_prepared_data.html#aa2337c801c9745d27929468f692d50bb">PreparedData::observations</a></div><div class="ttdeci">std::vector&lt; Observation &gt; observations</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:9</div></div>
+<div class="ttc" id="astruct_prepared_data_html_aad64432d47c820fe1e6ab37381faf7a8"><div class="ttname"><a href="struct_prepared_data.html#aad64432d47c820fe1e6ab37381faf7a8">PreparedData::observer</a></div><div class="ttdeci">Observer observer</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

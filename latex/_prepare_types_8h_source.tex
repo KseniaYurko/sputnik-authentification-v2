@@ -2,6 +2,15 @@
 \hypertarget{_prepare_types_8h_source}{}\label{_prepare_types_8h_source}\index{src/Modules/prepare/PrepareTypes.h@{src/Modules/prepare/PrepareTypes.h}}
 \mbox{\hyperlink{_prepare_types_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ onceЫ}}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{Modules/data/DataTypes.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_prepared_data}{PreparedData}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ std::vector<Observation>\ \mbox{\hyperlink{struct_prepared_data_aa2337c801c9745d27929468f692d50bb}{observations}};}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<SatelliteCatalogEntry>\ \mbox{\hyperlink{struct_prepared_data_a40d7610571bf4ec3da7dcf10dbf3236d}{catalog}};}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_observer}{Observer}}\ \mbox{\hyperlink{struct_prepared_data_aad64432d47c820fe1e6ab37381faf7a8}{observer}};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_measurement_sigma}{MeasurementSigma}}\ \mbox{\hyperlink{struct_prepared_data_a273c09a1698dd387d464fe2f5569443f}{sigma}};}
+\DoxyCodeLine{00013\ \};}
 
 \end{DoxyCode}

@@ -85,19 +85,26 @@ $(function() { codefold.init(0); });
 <div class="contents">
 <a href="_prepare_module_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_data_types_8h.html">../data/DataTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_prepare_types_8h.html">PrepareTypes.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_prepare_module.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_prepare_module.html">PrepareModule</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::vector&lt;Observation&gt; <a class="code hl_function" href="class_prepare_module.html#a5df8c865cbfb93f2fb929c719d8466a1">process</a>(</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">const</span> std::vector&lt;Observation&gt;&amp; input);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_struct" href="struct_prepared_data.html">PreparedData</a> <a class="code hl_function" href="class_prepare_module.html#a423724cd58f3524b5364f743a07bba5f">process</a>(</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">const</span> std::vector&lt;Observation&gt;&amp; observations,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">const</span> std::vector&lt;SatelliteCatalogEntry&gt;&amp; catalog,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">const</span> <a class="code hl_struct" href="struct_observer.html">Observer</a>&amp; observer,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">const</span> <a class="code hl_struct" href="struct_measurement_sigma.html">MeasurementSigma</a>&amp; sigma</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    );</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 </div>
-<div class="ttc" id="a_data_types_8h_html"><div class="ttname"><a href="_data_types_8h.html">DataTypes.h</a></div></div>
+<div class="ttc" id="a_prepare_types_8h_html"><div class="ttname"><a href="_prepare_types_8h.html">PrepareTypes.h</a></div></div>
 <div class="ttc" id="aclass_prepare_module_html"><div class="ttname"><a href="class_prepare_module.html">PrepareModule</a></div><div class="ttdoc">Модуль предварительной обработки данных</div><div class="ttdef"><b>Definition</b> PrepareModule.h:9</div></div>
-<div class="ttc" id="aclass_prepare_module_html_a5df8c865cbfb93f2fb929c719d8466a1"><div class="ttname"><a href="class_prepare_module.html#a5df8c865cbfb93f2fb929c719d8466a1">PrepareModule::process</a></div><div class="ttdeci">std::vector&lt; Observation &gt; process(const std::vector&lt; Observation &gt; &amp;input)</div><div class="ttdoc">Обработка наблюдений</div><div class="ttdef"><b>Definition</b> PrepareModule.cpp:6</div></div>
+<div class="ttc" id="aclass_prepare_module_html_a423724cd58f3524b5364f743a07bba5f"><div class="ttname"><a href="class_prepare_module.html#a423724cd58f3524b5364f743a07bba5f">PrepareModule::process</a></div><div class="ttdeci">PreparedData process(const std::vector&lt; Observation &gt; &amp;observations, const std::vector&lt; SatelliteCatalogEntry &gt; &amp;catalog, const Observer &amp;observer, const MeasurementSigma &amp;sigma)</div><div class="ttdoc">Обработка</div><div class="ttdef"><b>Definition</b> PrepareModule.cpp:9</div></div>
+<div class="ttc" id="astruct_measurement_sigma_html"><div class="ttname"><a href="struct_measurement_sigma.html">MeasurementSigma</a></div><div class="ttdoc">Ошибки измерений</div><div class="ttdef"><b>Definition</b> DataTypes.h:60</div></div>
+<div class="ttc" id="astruct_observer_html"><div class="ttname"><a href="struct_observer.html">Observer</a></div><div class="ttdoc">Координаты точки наблюдения ГСК</div><div class="ttdef"><b>Definition</b> DataTypes.h:21</div></div>
+<div class="ttc" id="astruct_prepared_data_html"><div class="ttname"><a href="struct_prepared_data.html">PreparedData</a></div><div class="ttdoc">Данные подготовленные для Core.</div><div class="ttdef"><b>Definition</b> PrepareTypes.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

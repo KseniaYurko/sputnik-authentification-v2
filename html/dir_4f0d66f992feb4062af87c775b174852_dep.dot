@@ -7,6 +7,15 @@ digraph "src/Modules/data"
   compound=true
   subgraph clusterdir_eeb7fcc90d516a232deaaf4de23f9c95 {
     graph [ bgcolor="#edf0f7", pencolor="grey50", label="Modules", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_eeb7fcc90d516a232deaaf4de23f9c95.html",tooltip=""]
-  dir_4f0d66f992feb4062af87c775b174852 [label="data", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_4f0d66f992feb4062af87c775b174852.html",tooltip=""];
+  subgraph clusterdir_4f0d66f992feb4062af87c775b174852 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_4f0d66f992feb4062af87c775b174852.html",tooltip=""]
+    dir_4f0d66f992feb4062af87c775b174852 [shape=plaintext, label="data"];
+  dir_1ea14ee398e63fc09bbee33dc682790a [label="CelestrakFetcher", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1ea14ee398e63fc09bbee33dc682790a.html",tooltip=""];
+  dir_ccedaadf90e32b0b8ef1acd08f8c387f [label="CelestrakRegistry", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ccedaadf90e32b0b8ef1acd08f8c387f.html",tooltip=""];
+  dir_8aaf71d5ac910afcb7948c78184c4f10 [label="DataModule", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_8aaf71d5ac910afcb7948c78184c4f10.html",tooltip=""];
+  dir_67db82d281158f5f5ece2c4866074f5e [label="TLEParser", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_67db82d281158f5f5ece2c4866074f5e.html",tooltip=""];
   }
+  }
+  dir_8aaf71d5ac910afcb7948c78184c4f10->dir_1ea14ee398e63fc09bbee33dc682790a [headlabel="1", labeldistance=1.5 headhref="dir_000004_000000.html" href="dir_000004_000000.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_8aaf71d5ac910afcb7948c78184c4f10->dir_67db82d281158f5f5ece2c4866074f5e [headlabel="1", labeldistance=1.5 headhref="dir_000004_000009.html" href="dir_000004_000009.html" color="steelblue1" fontcolor="steelblue1"];
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['identifysatellites_0',['identifySatellites',['../class_core_module.html#a968d58be929aa082c638622b842c421d',1,'CoreModule']]]
+  ['downloadcelestraktle_0',['downloadCelestrakTLE',['../_celestrak_fetcher_8cpp.html#a5aaf94110e51dc0b3bbb93325d2923e9',1,'downloadCelestrakTLE(const std::string &amp;group):&#160;CelestrakFetcher.cpp'],['../_celestrak_fetcher_8h.html#a5aaf94110e51dc0b3bbb93325d2923e9',1,'downloadCelestrakTLE(const std::string &amp;group):&#160;CelestrakFetcher.cpp']]]
 ];

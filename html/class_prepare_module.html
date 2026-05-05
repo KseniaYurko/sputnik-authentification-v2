@@ -85,34 +85,54 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5df8c865cbfb93f2fb929c719d8466a1" id="r_a5df8c865cbfb93f2fb929c719d8466a1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5df8c865cbfb93f2fb929c719d8466a1">process</a> (const std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt; &amp;input)</td></tr>
-<tr class="memdesc:a5df8c865cbfb93f2fb929c719d8466a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка наблюдений  <br /></td></tr>
-<tr class="separator:a5df8c865cbfb93f2fb929c719d8466a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423724cd58f3524b5364f743a07bba5f" id="r_a423724cd58f3524b5364f743a07bba5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_prepared_data.html">PreparedData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a423724cd58f3524b5364f743a07bba5f">process</a> (const std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt; &amp;observations, const std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt; &amp;catalog, const <a class="el" href="struct_observer.html">Observer</a> &amp;observer, const <a class="el" href="struct_measurement_sigma.html">MeasurementSigma</a> &amp;sigma)</td></tr>
+<tr class="memdesc:a423724cd58f3524b5364f743a07bba5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка  <br /></td></tr>
+<tr class="separator:a423724cd58f3524b5364f743a07bba5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Модуль предварительной обработки данных </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5df8c865cbfb93f2fb929c719d8466a1" name="a5df8c865cbfb93f2fb929c719d8466a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5df8c865cbfb93f2fb929c719d8466a1">&#9670;&#160;</a></span>process()</h2>
+<a id="a423724cd58f3524b5364f743a07bba5f" name="a423724cd58f3524b5364f743a07bba5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423724cd58f3524b5364f743a07bba5f">&#9670;&#160;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt; PrepareModule::process </td>
+          <td class="memname"><a class="el" href="struct_prepared_data.html">PreparedData</a> PrepareModule::process </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>observations</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>catalog</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_observer.html">Observer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>observer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_measurement_sigma.html">MeasurementSigma</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sigma</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Обработка наблюдений </p>
-<p>Пока просто возвращает входные данные </p>
+<p>Обработка </p>
+<p>Подготовка всех входных данных для Core. </p>
+<p>&mdash; 1. проверка наблюдений &mdash;</p>
+<p>&mdash; 2. фильтрация (ниже горизонта убрать) &mdash;</p>
+<p>&mdash; 3. сортировка по времени &mdash;</p>
+<p>&mdash; 4. проверка каталога &mdash;</p>
+<p>&mdash; 5. проверка observer &mdash;</p>
+<p>&mdash; 6. проверка sigma &mdash;</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1_icgraph.png" border="0" usemap="#aclass_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1_icgraph" alt=""/></div>
+<div class="center"><img src="class_prepare_module_a423724cd58f3524b5364f743a07bba5f_icgraph.png" border="0" usemap="#aclass_prepare_module_a423724cd58f3524b5364f743a07bba5f_icgraph" alt=""/></div>
 </div>
 
 </div>

@@ -85,7 +85,7 @@ int main() {
     auto results = core.identifySatellites(
         prepared.observations,
         prepared.catalog,
-        prepared.observer
+        prepared.observer, 10
     );
 
     /// --- 6. OUTPUT ---

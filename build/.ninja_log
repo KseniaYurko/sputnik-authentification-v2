@@ -1,11 +1,13 @@
 # ninja log v6
-68	1576	7981204902073080	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	f46587fac938496e
-74	1939	7981204902203053	CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj	83927ad7f7aee978
-39	2210	7981204901993091	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser/TLEParser.cpp.obj	8134685177c60623
-11	3879	7981204901517743	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher/CelestrakFetcher.cpp.obj	8102531154742955
-19	4034	7981204901577743	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry/CelestrakRegistry.cpp.obj	941fd3b299731915
-25	4213	7981204901657726	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule/DataModule.cpp.obj	293693b489b983fa
-26	393	7981205428208462	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	9596a4e9a1fc2995
-34	539	7981205428278473	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	f46587fac938496e
-40	705	7981205428348477	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	6b9da5e99518a83e
-707	6391	7981205435003176	SputnikAuthV2.exe	ad95051b98a545b1
+71	1024	7996756879308153	CMakeFiles/SputnikAuthV2.dir/src/Modules/output/OutputModule.cpp.obj	f46587fac938496e
+53	2227	7996755005251105	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/TLEParser/TLEParser.cpp.obj	8134685177c60623
+81	2271	7996755005525687	CMakeFiles/SputnikAuthV2.dir/src/Modules/prepare/PrepareModule.cpp.obj	83927ad7f7aee978
+7	3233	7996755004740543	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	9596a4e9a1fc2995
+84	1283	7996756879423553	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	6b9da5e99518a83e
+39	4460	7996755005060486	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/DataModule/DataModule.cpp.obj	293693b489b983fa
+19	4350	7996755004850461	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakFetcher/CelestrakFetcher.cpp.obj	8102531154742955
+1286	3876	7996756891427567	SputnikAuthV2.exe	ad95051b98a545b1
+29	4691	7996755004940446	CMakeFiles/SputnikAuthV2.dir/src/Modules/data/CelestrakRegistry/CelestrakRegistry.cpp.obj	941fd3b299731915
+46	1425	7996766645166743	CMakeFiles/SputnikAuthV2.dir/src/main.cpp.obj	6b9da5e99518a83e
+37	1896	7996766645062535	CMakeFiles/SputnikAuthV2.dir/src/Modules/core/CoreModule.cpp.obj	9596a4e9a1fc2995
+1899	4647	7996766663687016	SputnikAuthV2.exe	ad95051b98a545b1

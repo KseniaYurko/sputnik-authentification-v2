@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['loadcatalog_0',['loadCatalog',['../class_data_module.html#ad4f3833f3e7d3e65b7f68385975352a5',1,'DataModule']]],
-  ['loadobservations_1',['loadObservations',['../class_data_module.html#a30ef87ffe9241615af0bb5ccdc5fe7a4',1,'DataModule']]]
+  ['getcelestrakcatalogregistry_0',['getCelestrakCatalogRegistry',['../_celestrak_registry_8cpp.html#aa8e0e7e78c2be2ebb01a0ee4272bf904',1,'getCelestrakCatalogRegistry():&#160;CelestrakRegistry.cpp'],['../_celestrak_registry_8h.html#aa8e0e7e78c2be2ebb01a0ee4272bf904',1,'getCelestrakCatalogRegistry():&#160;CelestrakRegistry.cpp']]]
 ];

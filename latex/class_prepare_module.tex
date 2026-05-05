@@ -12,25 +12,35 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \mbox{\hyperlink{class_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1}{process}} (const std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \&input)
-\begin{DoxyCompactList}\small\item\em Обработка наблюдений \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_prepared_data}{Prepared\+Data}} \mbox{\hyperlink{class_prepare_module_a423724cd58f3524b5364f743a07bba5f}{process}} (const std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \&observations, const std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \&catalog, const \mbox{\hyperlink{struct_observer}{Observer}} \&observer, const \mbox{\hyperlink{struct_measurement_sigma}{Measurement\+Sigma}} \&sigma)
+\begin{DoxyCompactList}\small\item\em Обработка \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Модуль предварительной обработки данных 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1}\label{class_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1} 
+\Hypertarget{class_prepare_module_a423724cd58f3524b5364f743a07bba5f}\label{class_prepare_module_a423724cd58f3524b5364f743a07bba5f} 
 \index{PrepareModule@{PrepareModule}!process@{process}}
 \index{process@{process}!PrepareModule@{PrepareModule}}
 \doxysubsubsection{\texorpdfstring{process()}{process()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ Prepare\+Module\+::process (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \&}]{input }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_prepared_data}{Prepared\+Data}} Prepare\+Module\+::process (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \&}]{observations,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \&}]{catalog,  }\item[{const \mbox{\hyperlink{struct_observer}{Observer}} \&}]{observer,  }\item[{const \mbox{\hyperlink{struct_measurement_sigma}{Measurement\+Sigma}} \&}]{sigma }\end{DoxyParamCaption})}
 
 
 
-Обработка наблюдений 
+Обработка 
 
-Пока просто возвращает входные данные Here is the caller graph for this function\+:
+Подготовка всех входных данных для Core. --- 1. проверка наблюдений ---
+
+--- 2. фильтрация (ниже горизонта убрать) ---
+
+--- 3. сортировка по времени ---
+
+--- 4. проверка каталога ---
+
+--- 5. проверка observer ---
+
+--- 6. проверка sigma ---Here is the caller graph for this function\+:
 % FIG 0
 
 

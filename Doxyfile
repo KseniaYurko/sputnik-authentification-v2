@@ -2094,6 +2094,8 @@ PDF_HYPERLINKS         = YES
 
 USE_PDFLATEX           = YES
 
+INPUT_ENCODING = UTF-8
+
 # The LATEX_BATCHMODE tag signals the behavior of LaTeX in case of an error.
 # Possible values are: NO same as ERROR_STOP, YES same as BATCH, BATCH In batch
 # mode nothing is printed on the terminal, errors are scrolled as if <return> is

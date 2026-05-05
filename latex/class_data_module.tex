@@ -15,7 +15,15 @@
 std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \mbox{\hyperlink{class_data_module_ad4f3833f3e7d3e65b7f68385975352a5}{load\+Catalog}} (const std\+::string \&path)
 \begin{DoxyCompactList}\small\item\em Загрузка каталога спутников из TLE-\/файла \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \mbox{\hyperlink{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4}{load\+Observations}} (const std\+::string \&path)
-\begin{DoxyCompactList}\small\item\em Загрузка наблюдений (пока заглушка) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Загрузка наблюдений (пока заглушка) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_data_module_a15d6e2d26292dc2b3688812e8a7668e7}{update\+Selected\+Groups}} (const std\+::vector$<$ \mbox{\hyperlink{struct_celestrak_group}{Celestrak\+Group}} $>$ \&groups)
+\begin{DoxyCompactList}\small\item\em Скачать выбранные группы каталогов \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \mbox{\hyperlink{class_data_module_a6037058d607d5b986ad0bd8a492f81dd}{load\+Catalog\+From\+Files}} (const std\+::vector$<$ std\+::string $>$ \&paths)
+\begin{DoxyCompactList}\small\item\em Загрузка каталога из нескольких файлов \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \mbox{\hyperlink{class_data_module_a78444c54378846d53431fe6d38ebc171}{load\+Selected\+Catalogs}} (const std\+::vector$<$ \mbox{\hyperlink{struct_celestrak_group}{Celestrak\+Group}} $>$ \&groups)
+\begin{DoxyCompactList}\small\item\em Загрузить выбранные каталоги \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ \mbox{\hyperlink{class_data_module_aba9bef829dec36b2fff2f7ce39b70d2b}{load\+All\+Catalogs}} ()
+\begin{DoxyCompactList}\small\item\em Загрузить все каталоги из папки data/. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -24,6 +32,18 @@ std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \mbox{\h
 Отвечает за чтение файлов и преобразование их в структуры данных. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_module_aba9bef829dec36b2fff2f7ce39b70d2b}\label{class_data_module_aba9bef829dec36b2fff2f7ce39b70d2b} 
+\index{DataModule@{DataModule}!loadAllCatalogs@{loadAllCatalogs}}
+\index{loadAllCatalogs@{loadAllCatalogs}!DataModule@{DataModule}}
+\doxysubsubsection{\texorpdfstring{loadAllCatalogs()}{loadAllCatalogs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ Data\+Module\+::load\+All\+Catalogs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Загрузить все каталоги из папки data/. 
+
+Here is the call graph for this function\+:
+% FIG 0
 \Hypertarget{class_data_module_ad4f3833f3e7d3e65b7f68385975352a5}\label{class_data_module_ad4f3833f3e7d3e65b7f68385975352a5} 
 \index{DataModule@{DataModule}!loadCatalog@{loadCatalog}}
 \index{loadCatalog@{loadCatalog}!DataModule@{DataModule}}
@@ -34,7 +54,39 @@ std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \mbox{\h
 
 Загрузка каталога спутников из TLE-\/файла 
 
-ЗАГЛУШКА!!! ВСТАВИТЬ Catalog\+Loader \Hypertarget{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4}\label{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4} 
+ЗАГЛУШКА!!! ВСТАВИТЬ Catalog\+Loader \Hypertarget{class_data_module_a6037058d607d5b986ad0bd8a492f81dd}\label{class_data_module_a6037058d607d5b986ad0bd8a492f81dd} 
+\index{DataModule@{DataModule}!loadCatalogFromFiles@{loadCatalogFromFiles}}
+\index{loadCatalogFromFiles@{loadCatalogFromFiles}!DataModule@{DataModule}}
+\doxysubsubsection{\texorpdfstring{loadCatalogFromFiles()}{loadCatalogFromFiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ Data\+Module\+::load\+Catalog\+From\+Files (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{paths }\end{DoxyParamCaption})}
+
+
+
+Загрузка каталога из нескольких файлов 
+
+Читает несколько TLE-\/файлов и объединяет их в один каталог спутников.
+
+Алгоритм\+:
+\begin{DoxyEnumerate}
+\item Проходит по списку путей
+\item Читает содержимое каждого файла
+\item Парсит TLE
+\item Объединяет результаты в один вектор
+\end{DoxyEnumerate}
+
+Если файл не найден — пропускается с выводом предупреждения.
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & Список путей к TLE-\/файлам \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Объединённый каталог спутников 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4}\label{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4} 
 \index{DataModule@{DataModule}!loadObservations@{loadObservations}}
 \index{loadObservations@{loadObservations}!DataModule@{DataModule}}
 \doxysubsubsection{\texorpdfstring{loadObservations()}{loadObservations()}}
@@ -44,9 +96,37 @@ std\+::vector$<$ \mbox{\hyperlink{struct_observation}{Observation}} $>$ \mbox{\h
 
 Загрузка наблюдений (пока заглушка) 
 
+\Hypertarget{class_data_module_a78444c54378846d53431fe6d38ebc171}\label{class_data_module_a78444c54378846d53431fe6d38ebc171} 
+\index{DataModule@{DataModule}!loadSelectedCatalogs@{loadSelectedCatalogs}}
+\index{loadSelectedCatalogs@{loadSelectedCatalogs}!DataModule@{DataModule}}
+\doxysubsubsection{\texorpdfstring{loadSelectedCatalogs()}{loadSelectedCatalogs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_satellite_catalog_entry}{Satellite\+Catalog\+Entry}} $>$ Data\+Module\+::load\+Selected\+Catalogs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_celestrak_group}{Celestrak\+Group}} $>$ \&}]{groups }\end{DoxyParamCaption})}
+
+
+
+Загрузить выбранные каталоги 
+
+Читает только те файлы, которые соответствуют выбранным группам. удаление дубликатовHere is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_data_module_a15d6e2d26292dc2b3688812e8a7668e7}\label{class_data_module_a15d6e2d26292dc2b3688812e8a7668e7} 
+\index{DataModule@{DataModule}!updateSelectedGroups@{updateSelectedGroups}}
+\index{updateSelectedGroups@{updateSelectedGroups}!DataModule@{DataModule}}
+\doxysubsubsection{\texorpdfstring{updateSelectedGroups()}{updateSelectedGroups()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Data\+Module\+::update\+Selected\+Groups (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_celestrak_group}{Celestrak\+Group}} $>$ \&}]{groups }\end{DoxyParamCaption})}
+
+
+
+Скачать выбранные группы каталогов 
+
+Скачивает группы и сохраняет в data/$<$category$>$/$<$group$>$.tle. Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Modules/data/\mbox{\hyperlink{_data_module_8h}{Data\+Module.\+h}}\item 
-src/\+Modules/data/\mbox{\hyperlink{_data_module_8cpp}{Data\+Module.\+cpp}}\end{DoxyCompactItemize}
+src/\+Modules/data/\+Data\+Module/\mbox{\hyperlink{_data_module_8h}{Data\+Module.\+h}}\item 
+src/\+Modules/data/\+Data\+Module/\mbox{\hyperlink{_data_module_8cpp}{Data\+Module.\+cpp}}\end{DoxyCompactItemize}

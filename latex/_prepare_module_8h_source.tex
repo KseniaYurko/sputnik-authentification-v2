@@ -4,13 +4,17 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{../data/DataTypes.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_prepare_types_8h}{PrepareTypes.h}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_prepare_module}{PrepareModule}}\ \{}
 \DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ std::vector<Observation>\ \mbox{\hyperlink{class_prepare_module_a5df8c865cbfb93f2fb929c719d8466a1}{process}}(}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Observation>\&\ input);}
-\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_prepared_data}{PreparedData}}\ \mbox{\hyperlink{class_prepare_module_a423724cd58f3524b5364f743a07bba5f}{process}}(}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Observation>\&\ observations,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<SatelliteCatalogEntry>\&\ catalog,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_observer}{Observer}}\&\ observer,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_measurement_sigma}{MeasurementSigma}}\&\ sigma}
+\DoxyCodeLine{00019\ \ \ \ \ );}
+\DoxyCodeLine{00020\ \};}
 
 \end{DoxyCode}

@@ -91,11 +91,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a30ef87ffe9241615af0bb5ccdc5fe7a4" id="r_a30ef87ffe9241615af0bb5ccdc5fe7a4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_observation.html">Observation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ef87ffe9241615af0bb5ccdc5fe7a4">loadObservations</a> (const std::string &amp;path)</td></tr>
 <tr class="memdesc:a30ef87ffe9241615af0bb5ccdc5fe7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка наблюдений (пока заглушка)  <br /></td></tr>
 <tr class="separator:a30ef87ffe9241615af0bb5ccdc5fe7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d6e2d26292dc2b3688812e8a7668e7" id="r_a15d6e2d26292dc2b3688812e8a7668e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15d6e2d26292dc2b3688812e8a7668e7">updateSelectedGroups</a> (const std::vector&lt; <a class="el" href="struct_celestrak_group.html">CelestrakGroup</a> &gt; &amp;groups)</td></tr>
+<tr class="memdesc:a15d6e2d26292dc2b3688812e8a7668e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скачать выбранные группы каталогов  <br /></td></tr>
+<tr class="separator:a15d6e2d26292dc2b3688812e8a7668e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6037058d607d5b986ad0bd8a492f81dd" id="r_a6037058d607d5b986ad0bd8a492f81dd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6037058d607d5b986ad0bd8a492f81dd">loadCatalogFromFiles</a> (const std::vector&lt; std::string &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a6037058d607d5b986ad0bd8a492f81dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка каталога из нескольких файлов  <br /></td></tr>
+<tr class="separator:a6037058d607d5b986ad0bd8a492f81dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78444c54378846d53431fe6d38ebc171" id="r_a78444c54378846d53431fe6d38ebc171"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78444c54378846d53431fe6d38ebc171">loadSelectedCatalogs</a> (const std::vector&lt; <a class="el" href="struct_celestrak_group.html">CelestrakGroup</a> &gt; &amp;groups)</td></tr>
+<tr class="memdesc:a78444c54378846d53431fe6d38ebc171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузить выбранные каталоги  <br /></td></tr>
+<tr class="separator:a78444c54378846d53431fe6d38ebc171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9bef829dec36b2fff2f7ce39b70d2b" id="r_aba9bef829dec36b2fff2f7ce39b70d2b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba9bef829dec36b2fff2f7ce39b70d2b">loadAllCatalogs</a> ()</td></tr>
+<tr class="memdesc:aba9bef829dec36b2fff2f7ce39b70d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузить все каталоги из папки data/.  <br /></td></tr>
+<tr class="separator:aba9bef829dec36b2fff2f7ce39b70d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Модуль загрузки и предоставления данных </p>
 <p>Отвечает за чтение файлов и преобразование их в структуры данных. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aba9bef829dec36b2fff2f7ce39b70d2b" name="aba9bef829dec36b2fff2f7ce39b70d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9bef829dec36b2fff2f7ce39b70d2b">&#9670;&#160;</a></span>loadAllCatalogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt; DataModule::loadAllCatalogs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузить все каталоги из папки data/. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_aba9bef829dec36b2fff2f7ce39b70d2b_cgraph.png" border="0" usemap="#aclass_data_module_aba9bef829dec36b2fff2f7ce39b70d2b_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ad4f3833f3e7d3e65b7f68385975352a5" name="ad4f3833f3e7d3e65b7f68385975352a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f3833f3e7d3e65b7f68385975352a5">&#9670;&#160;</a></span>loadCatalog()</h2>
 
@@ -113,6 +149,45 @@ Public Member Functions</h2></td></tr>
 
 <p>Загрузка каталога спутников из TLE-файла </p>
 <p>ЗАГЛУШКА!!! ВСТАВИТЬ CatalogLoader </p>
+
+</div>
+</div>
+<a id="a6037058d607d5b986ad0bd8a492f81dd" name="a6037058d607d5b986ad0bd8a492f81dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6037058d607d5b986ad0bd8a492f81dd">&#9670;&#160;</a></span>loadCatalogFromFiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt; DataModule::loadCatalogFromFiles </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>paths</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузка каталога из нескольких файлов </p>
+<p>Читает несколько TLE-файлов и объединяет их в один каталог спутников.</p>
+<p>Алгоритм:</p><ol type="1">
+<li>Проходит по списку путей</li>
+<li>Читает содержимое каждого файла</li>
+<li>Парсит TLE</li>
+<li>Объединяет результаты в один вектор</li>
+</ol>
+<p>Если файл не найден — пропускается с выводом предупреждения.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>Список путей к TLE-файлам </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Объединённый каталог спутников </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_a6037058d607d5b986ad0bd8a492f81dd_cgraph.png" border="0" usemap="#aclass_data_module_a6037058d607d5b986ad0bd8a492f81dd_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -135,9 +210,70 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a78444c54378846d53431fe6d38ebc171" name="a78444c54378846d53431fe6d38ebc171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78444c54378846d53431fe6d38ebc171">&#9670;&#160;</a></span>loadSelectedCatalogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="struct_satellite_catalog_entry.html">SatelliteCatalogEntry</a> &gt; DataModule::loadSelectedCatalogs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_celestrak_group.html">CelestrakGroup</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузить выбранные каталоги </p>
+<p>Читает только те файлы, которые соответствуют выбранным группам. </p>
+<p>удаление дубликатов</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_a78444c54378846d53431fe6d38ebc171_cgraph.png" border="0" usemap="#aclass_data_module_a78444c54378846d53431fe6d38ebc171_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_a78444c54378846d53431fe6d38ebc171_icgraph.png" border="0" usemap="#aclass_data_module_a78444c54378846d53431fe6d38ebc171_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a15d6e2d26292dc2b3688812e8a7668e7" name="a15d6e2d26292dc2b3688812e8a7668e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d6e2d26292dc2b3688812e8a7668e7">&#9670;&#160;</a></span>updateSelectedGroups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; DataModule::updateSelectedGroups </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_celestrak_group.html">CelestrakGroup</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Скачать выбранные группы каталогов </p>
+<p>Скачивает группы и сохраняет в data/&lt;category&gt;/&lt;group&gt;.tle. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_a15d6e2d26292dc2b3688812e8a7668e7_cgraph.png" border="0" usemap="#aclass_data_module_a15d6e2d26292dc2b3688812e8a7668e7_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_module_a15d6e2d26292dc2b3688812e8a7668e7_icgraph.png" border="0" usemap="#aclass_data_module_a15d6e2d26292dc2b3688812e8a7668e7_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/Modules/data/<a class="el" href="_data_module_8h_source.html">DataModule.h</a></li>
-<li>src/Modules/data/<a class="el" href="_data_module_8cpp.html">DataModule.cpp</a></li>
+<li>src/Modules/data/DataModule/<a class="el" href="_data_module_8h_source.html">DataModule.h</a></li>
+<li>src/Modules/data/DataModule/<a class="el" href="_data_module_8cpp.html">DataModule.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

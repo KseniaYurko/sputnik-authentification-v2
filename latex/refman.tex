@@ -26,6 +26,8 @@
   \usepackage{doxygen}
   \usepackage{graphicx}
   \usepackage[utf8]{inputenc}
+  \usepackage[T2A]{fontenc}
+  \usepackage[russian]{babel}
   \usepackage{makeidx}
   \PassOptionsToPackage{warn}{textcomp}
   \usepackage{textcomp}
@@ -211,6 +213,8 @@
 \chapter{File Index}
 \input{files}
 \chapter{Class Documentation}
+\input{struct_celestrak_category}
+\input{struct_celestrak_group}
 \input{class_core_module}
 \input{class_data_module}
 \input{struct_match_result}
@@ -218,6 +222,7 @@
 \input{struct_observation}
 \input{struct_observer}
 \input{class_output_module}
+\input{struct_prepared_data}
 \input{class_prepare_module}
 \input{struct_satellite_catalog_entry}
 \chapter{File Documentation}
@@ -227,11 +232,20 @@
 \input{_core_module_8h_source}
 \input{_core_types_8h}
 \input{_core_types_8h_source}
+\input{_celestrak_fetcher_8cpp}
+\input{_celestrak_fetcher_8h}
+\input{_celestrak_fetcher_8h_source}
+\input{_celestrak_registry_8cpp}
+\input{_celestrak_registry_8h}
+\input{_celestrak_registry_8h_source}
 \input{_data_module_8cpp}
 \input{_data_module_8h}
 \input{_data_module_8h_source}
 \input{_data_types_8h}
 \input{_data_types_8h_source}
+\input{_t_l_e_parser_8cpp}
+\input{_t_l_e_parser_8h}
+\input{_t_l_e_parser_8h_source}
 \input{_output_module_8cpp}
 \input{_output_module_8h}
 \input{_output_module_8h_source}

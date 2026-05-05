@@ -1,18 +1,30 @@
 \doxysection{Data\+Module.\+h}
-\hypertarget{_data_module_8h_source}{}\label{_data_module_8h_source}\index{src/Modules/data/DataModule.h@{src/Modules/data/DataModule.h}}
+\hypertarget{_data_module_8h_source}{}\label{_data_module_8h_source}\index{src/Modules/data/DataModule/DataModule.h@{src/Modules/data/DataModule/DataModule.h}}
 \mbox{\hyperlink{_data_module_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{DataTypes.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_types_8h}{Modules/data/DataTypes.h}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_module}{DataModule}}\ \{}
 \DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ std::vector<SatelliteCatalogEntry>\ \mbox{\hyperlink{class_data_module_ad4f3833f3e7d3e65b7f68385975352a5}{loadCatalog}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00018\ \ \ \ \ \ std::vector<SatelliteCatalogEntry>\ \mbox{\hyperlink{class_data_module_ad4f3833f3e7d3e65b7f68385975352a5}{loadCatalog}}(\textcolor{keyword}{const}\ std::string\&\ path);}
 \DoxyCodeLine{00019\ }
 \DoxyCodeLine{00023\ \ \ \ \ std::vector<Observation>\ \mbox{\hyperlink{class_data_module_a30ef87ffe9241615af0bb5ccdc5fe7a4}{loadObservations}}(\textcolor{keyword}{const}\ std::string\&\ path);}
-\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<std::string>}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_data_module_a15d6e2d26292dc2b3688812e8a7668e7}{updateSelectedGroups}}(\textcolor{keyword}{const}\ std::vector<CelestrakGroup>\&\ groups);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<SatelliteCatalogEntry>}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_data_module_a6037058d607d5b986ad0bd8a492f81dd}{loadCatalogFromFiles}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ paths);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::vector<SatelliteCatalogEntry>}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_data_module_a78444c54378846d53431fe6d38ebc171}{loadSelectedCatalogs}}(\textcolor{keyword}{const}\ std::vector<CelestrakGroup>\&\ groups);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<SatelliteCatalogEntry>\ \mbox{\hyperlink{class_data_module_aba9bef829dec36b2fff2f7ce39b70d2b}{loadAllCatalogs}}();}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
 
 \end{DoxyCode}
