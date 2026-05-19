@@ -1,0 +1,3 @@
+#pragma once
+
+inline constexpr const char* kProjectRootPath = "@CMAKE_SOURCE_DIR@";

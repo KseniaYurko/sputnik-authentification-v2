@@ -16,7 +16,11 @@ void OutputModule::print(const std::vector<MatchResult>& results) {
                   << r.satellite_name
                   << " | NORAD: " << r.norad_id
                   << " | chi^2: " << r.chi_squared
-                  << " | Probability: " << r.probability
+                  << " | reduced chi^2: " << r.reduced_chi_squared
+                  << " | P(catalog): " << r.probability << "%"
+                  << " | fit p-value: " << r.fit_p_value
+                  << " | fit: "
+                  << (r.catalog_match ? "compatible" : "rejected")
                   << std::endl;
     }
 }

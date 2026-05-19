@@ -55,6 +55,9 @@ PreparedData PrepareModule::process(
     if (sigma.sigmaAz_deg <= 0 || sigma.sigmaEl_deg <= 0) {
         throw std::runtime_error("Invalid measurement sigma");
     }
+    if (sigma.sigmaAzRate_degps < 0 || sigma.sigmaElRate_degps < 0) {
+        throw std::runtime_error("Invalid angular-rate measurement sigma");
+    }
 
     out.sigma = sigma;
 

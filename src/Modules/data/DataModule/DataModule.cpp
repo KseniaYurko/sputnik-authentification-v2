@@ -1,6 +1,7 @@
 #include "DataModule.h"
 #include "Modules/data/CelestrakFetcher/CelestrakFetcher.h"
 #include "Modules/data/TLEParser/TLEParser.h"
+#include "ProjectConfig.h"
 
 #include <fstream>
 #include <sstream>
@@ -8,6 +9,21 @@
 #include <iostream>
 #include <unordered_map>
 
+namespace {
+
+std::filesystem::path projectDataRoot() {
+    return std::filesystem::path(kProjectRootPath) / "data";
+}
+
+} // namespace
+
+std::string DataModule::getCatalogPath(const CelestrakGroup& group) {
+    return (
+        projectDataRoot() /
+        group.category_slug /
+        (group.group_slug + ".tle")
+    ).string();
+}
 
 /**
  * ЗАГЛУШКА!!! ВСТАВИТЬ CatalogLoader
@@ -30,8 +46,7 @@ DataModule::updateSelectedGroups(const std::vector<CelestrakGroup>& groups) {
 
     for (const auto& g : groups) {
 
-        std::string path =
-            "data/" + g.category_slug + "/" + g.group_slug + ".tle";
+        std::string path = getCatalogPath(g);
 
         std::filesystem::create_directories(
             std::filesystem::path(path).parent_path()
@@ -94,8 +109,7 @@ DataModule::loadSelectedCatalogs(const std::vector<CelestrakGroup>& groups) {
 
     for (const auto& g : groups) {
 
-        std::string path =
-            "data/" + g.category_slug + "/" + g.group_slug + ".tle";
+        std::string path = getCatalogPath(g);
 
         std::ifstream file(path);
 
@@ -134,7 +148,15 @@ DataModule::loadAllCatalogs() {
 
     std::vector<SatelliteCatalogEntry> result;
 
-    for (auto& p : std::filesystem::recursive_directory_iterator("data")) {
+    const auto root = projectDataRoot();
+
+    if (!std::filesystem::exists(root)) {
+        std::cout << "[Data] data directory does not exist: "
+                  << root << std::endl;
+        return {};
+    }
+
+    for (auto& p : std::filesystem::recursive_directory_iterator(root)) {
 
         if (p.path().extension() == ".tle") {
 

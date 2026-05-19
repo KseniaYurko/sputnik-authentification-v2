@@ -248,6 +248,24 @@ CURL_DIR:PATH=C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vc
 //Enable pkg-config to detect CURL dependencies. Default: ON
 CURL_USE_PKGCONFIG:BOOL=ON
 
+//CXX compiler flags for OpenMP parallelization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+//CXX compiler libraries for OpenMP parallelization
+OpenMP_CXX_LIB_NAMES:STRING=gomp;mingwthrd;mingwthrd
+
+//C compiler flags for OpenMP parallelization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+//C compiler libraries for OpenMP parallelization
+OpenMP_C_LIB_NAMES:STRING=gomp;mingwthrd;mingwthrd
+
+//Path to the gomp library for OpenMP
+OpenMP_gomp_LIBRARY:FILEPATH=C:/Strawberry/c/lib/libgomp.dll.a
+
+//Path to the mingwthrd library for OpenMP
+OpenMP_mingwthrd_LIBRARY:FILEPATH=C:/Strawberry/c/x86_64-w64-mingw32/lib/libmingwthrd.a
+
 //Value Computed by CMake
 SputnikAuthV2_BINARY_DIR:STATIC=C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/build
 
@@ -486,8 +504,38 @@ CURL_LIBRARY_DEBUG:INTERNAL=C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authenti
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //vcpkg
 CURL_LIBRARY_RELEASE:INTERNAL=C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a
+//Details about finding OpenMP
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v4.5()]
+//Details about finding OpenMP_C
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][C:/Strawberry/c/lib/libgomp.dll.a][C:/Strawberry/c/x86_64-w64-mingw32/lib/libmingwthrd.a][C:/Strawberry/c/x86_64-w64-mingw32/lib/libmingwthrd.a][v4.5()]
+//Details about finding OpenMP_CXX
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][C:/Strawberry/c/lib/libgomp.dll.a][C:/Strawberry/c/x86_64-w64-mingw32/lib/libmingwthrd.a][C:/Strawberry/c/x86_64-w64-mingw32/lib/libmingwthrd.a][v4.5()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/lib/libzlib.dll.a;debug;C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/debug/lib/libzlibd.dll.a][C:/Users/ksyu2/Desktop/MIPT/diploma/sputnik-authentification-v2/vcpkg/installed/x64-mingw-dynamic/include][c ][v1.3.1(1)]
+//Result of TRY_COMPILE
+OpenMP_COMPILE_RESULT_CXX_fopenmp:INTERNAL=TRUE
+//Result of TRY_COMPILE
+OpenMP_COMPILE_RESULT_C_fopenmp:INTERNAL=TRUE
+//ADVANCED property for variable: OpenMP_CXX_FLAGS
+OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_CXX_LIB_NAMES
+OpenMP_CXX_LIB_NAMES-ADVANCED:INTERNAL=1
+//CXX compiler's OpenMP specification date
+OpenMP_CXX_SPEC_DATE:INTERNAL=201511
+//ADVANCED property for variable: OpenMP_C_FLAGS
+OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_C_LIB_NAMES
+OpenMP_C_LIB_NAMES-ADVANCED:INTERNAL=1
+//C compiler's OpenMP specification date
+OpenMP_C_SPEC_DATE:INTERNAL=201511
+//Result of TRY_COMPILE
+OpenMP_SPECTEST_CXX_:INTERNAL=TRUE
+//Result of TRY_COMPILE
+OpenMP_SPECTEST_C_:INTERNAL=TRUE
+//ADVANCED property for variable: OpenMP_gomp_LIBRARY
+OpenMP_gomp_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_mingwthrd_LIBRARY
+OpenMP_mingwthrd_LIBRARY-ADVANCED:INTERNAL=1
 //Install the dependencies listed in your manifest:
 //\n    If this is off, you will have to manually install your dependencies.
 //\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md

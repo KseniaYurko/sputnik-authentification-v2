@@ -18,6 +18,7 @@ Makefile
 *.ninja
 *.ninja_deps
 *.ninja_log
+.md
 
 # ========================
 # Executables / binaries

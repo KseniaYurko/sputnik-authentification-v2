@@ -1,5 +1,10 @@
+#include "Modules/app/ConsoleInterface/ConsoleInterface.h"
+
 #include "Modules/data/DataModule/DataModule.h"
-#include "Modules/data/CelestrakRegistry/CelestrakRegistry.h"
+
+#include "Modules/experiments/ExperimentRunner/ExperimentRunner.h"
+
+#include "Modules/observation/ObservationGenerator/ObservationGenerator.h"
 
 #include "Modules/prepare/PrepareModule.h"
 
@@ -9,63 +14,66 @@
 
 
 #include <iostream>
+#include <vector>
 
 int main() {
-    std::cout << "Program started" << std::endl;
-
+    ConsoleInterface console;
     DataModule data;
+    ExperimentRunner experiments;
+    ObservationGenerator generator;
     PrepareModule prep;
     CoreModule core;
     OutputModule output;
 
-    /// --- 1. UPDATE ---
-    std::cout << "Update catalogs? (1 = yes, 0 = no): ";
-    int updateMode;
-    std::cin >> updateMode;
-    std::cin.ignore();
+    console.printBanner();
 
-    if (updateMode == 1) {
+    /// --- 1. ОБНОВЛЕНИЕ ДАННЫХ ---
+    bool updateMode = console.promptUpdateCatalogs();
 
-        std::cout << "\nSelect catalogs to update:\n";
-        printCelestrakMenu();
+    if (updateMode) {
 
-        std::string input;
-        std::getline(std::cin, input);
+        auto groups = console.promptCatalogSelection("Catalogs to update");
 
-        auto groups = resolveUserSelection(input);
-
+        console.printSelectedGroups(groups);
         data.updateSelectedGroups(groups);
     }
 
-    /// --- 2. LOAD / ANALYSIS ---
-    std::cout << "\nSelect catalogs for analysis:\n";
-    printCelestrakMenu();
+    /// --- 2. ЗАГРУЗКА ВЫБРАННЫХ КАТАЛОГОВ ---
+    auto selectedGroups = console.promptCatalogSelection("Catalogs for analysis");
 
-    std::string input2;
-    std::getline(std::cin, input2);
-
-    auto selectedGroups = resolveUserSelection(input2);
-
+    console.printSelectedGroups(selectedGroups);
+    console.ensureLocalCatalogs(data, selectedGroups);
     auto catalog = data.loadSelectedCatalogs(selectedGroups);
 
     std::cout << "Total satellites for analysis: "
               << catalog.size() << std::endl;
 
-    /// --- 3. ВХОДНЫЕ ДАННЫЕ (пока заглушка) ---
-    std::vector<Observation> observations;
+    /// --- 3. ВХОДНЫЕ ДАННЫЕ ---
+    GeneratedObservationSet generated;
 
-    // TODO: потом сюда чтение файла наблюдений
-    observations.push_back({0.0, 30.0, 2451545.0, 0.1});
-    observations.push_back({10.0, 35.0, 2451545.0, 0.2});
+    try {
+        generated = generator.generateIdealMoscowPass(catalog, 10);
+    }
+    catch (const std::exception& e) {
+        std::cout << "[Generator ERROR] " << e.what() << std::endl;
+        return 1;
+    }
 
-    Observer observer{55.0, 37.0, 0.2};
+    std::vector<Observation> observations = generated.observations;
+    Observer observer = generated.observer;
+
+    std::cout << "[Generator] Target: "
+              << generated.target.name
+              << " | NORAD: " << generated.target.norad_id
+              << " | observations: " << observations.size()
+              << std::endl;
 
     MeasurementSigma sigma{
         0.1, 0.1,
-        0.01, 0.01
+        0.0, 0.0
     };
 
-    /// --- 4. PREPARE ---
+    /// --- 4. ПОДГОТОВКА ДАННЫХ ДЛЯ ЯДРА ---
     PreparedData prepared;
 
     try {
@@ -81,15 +89,52 @@ int main() {
         return 1;
     }
 
-    /// --- 5. CORE ---
-    auto results = core.identifySatellites(
-        prepared.observations,
-        prepared.catalog,
-        prepared.observer, 10
-    );
+    /// --- 5. ЯДРО ---
+    auto results = core.identifySatellites(prepared, 10);
 
-    /// --- 6. OUTPUT ---
+    /// --- 6. ВЫВОД РЕЗУЛЬТАТОВ ---
     output.print(results);
+
+    if (!results.empty()) {
+        const auto& best = results.front();
+        std::cout << "[Decision] "
+                  << (best.catalog_match
+                      ? "H_in accepted: best catalog candidate is compatible"
+                      : "observed object is likely outside selected catalog")
+                  << " | alpha: 0.001"
+                  << " | best fit p-value: " << best.fit_p_value
+                  << "\n";
+    }
+
+    bool targetFound = false;
+    for (size_t i = 0; i < results.size(); ++i) {
+        if (results[i].norad_id == generated.target.norad_id) {
+            std::cout << "[Check] target rank: " << (i + 1)
+                      << " | chi^2: " << results[i].chi_squared
+                      << " | reduced chi^2: "
+                      << results[i].reduced_chi_squared
+                      << " | probability: " << results[i].probability
+                      << "%"
+                      << " | fit p-value: " << results[i].fit_p_value
+                      << "\n";
+            targetFound = true;
+            break;
+        }
+    }
+
+    if (!targetFound) {
+        std::cout << "[Check] target is outside printed top results\n";
+    }
+
+    if (console.promptRunExperiments()) {
+        try {
+            experiments.runDefaultSuite(prepared, generated.target);
+        }
+        catch (const std::exception& e) {
+            std::cout << "[Experiments ERROR] " << e.what() << std::endl;
+            return 1;
+        }
+    }
 
     std::cout << "Finished" << std::endl;
 

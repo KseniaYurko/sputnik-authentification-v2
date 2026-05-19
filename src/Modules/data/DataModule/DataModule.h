@@ -13,6 +13,11 @@
 class DataModule {
 public:
     /**
+     * @brief Абсолютный путь к локальному TLE-файлу группы
+     */
+    static std::string getCatalogPath(const CelestrakGroup& group);
+
+    /**
      * @brief Загрузка каталога спутников из TLE-файла
      */
      std::vector<SatelliteCatalogEntry> loadCatalog(const std::string& path);
